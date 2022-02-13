@@ -8,7 +8,7 @@ const AddAdmin = () => {
     const onSubmit = data => {
         
         
-        axios.put('http://localhost:5000/users/admin', data)
+        axios.put('https://afternoon-falls-48322.herokuapp.com/users/admin', data)
         .then(res =>{
          
             if(res.data.modifiedCount){

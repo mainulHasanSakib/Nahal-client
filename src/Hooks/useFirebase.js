@@ -63,7 +63,7 @@ useEffect(()=>{
       });
 },[auth])
 useEffect(()=>{
-  fetch(`http://localhost:5000/users/${user.email}`)
+  fetch(`https://afternoon-falls-48322.herokuapp.com/users/${user.email}`)
   .then(res=>res.json())
   .then(data=> setAdmin(data.admin))
 }, [user.email])
@@ -80,7 +80,7 @@ const logoutUser=()=>{
 
 const saveUser=(data)=>{
   
-  axios.post('http://localhost:5000/users', data)
+  axios.post('https://afternoon-falls-48322.herokuapp.com/users', data)
   .then(res=>{
     
     if(res.data.insertedId){
